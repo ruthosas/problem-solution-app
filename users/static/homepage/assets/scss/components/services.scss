@@ -1,0 +1,24 @@
+.our-services{
+    .sd{
+            padding: 0px;
+        }
+    .service-box{
+        text-align: center;
+        padding: 25px;
+        border-right: 1px solid #CCC;
+        border-top:1px solid #CCC; 
+        border-bottom:1px solid #CCC; 
+        h3{
+            font-size: 1.2rem;
+            font-family: $mouse-300;
+            margin-bottom: 10px;
+        }
+        i{
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        p{
+            font-size: .8rem;
+        }
+    }
+}

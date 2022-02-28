@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-md colfixed-top navbar-dark bg-dark" aria-label="Main navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CITTU PROB/SOL LOG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        {% if request.user.groups.all.0.name != 'desk_officer' %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'problem' %}">Enter Complaints</a>
+        </li>
+        {% endif %}
+        {% if request.user.groups.all.0.name != 'desk_officer' and request.user.groups.all.0.name != 'users'  %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'problem_list' %}">Problem List </a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'solution_list' %}">Solution List</a>
+        </li> 
+        {%endif%}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'adopted_solutions_list' %}">Adopted Solution List</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'reportform' %}">Enter Reports</a>
+        </li> 
+      </ul>
+      
+      
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" style="font: bold; color: aliceblue;">{{request.user.username}}</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown01">
+            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="{% url 'login' %}">Logout</a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+            <!-- <li><a class="dropdown-item" href="#">Change Password</a></li> -->
+          </ul>
+        </li>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        {%endif%}
+        <form class="d-flex" method="POST" action="{% url 'search-problem' %}">
+          {% csrf_token %}
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+  </div>
+</nav>

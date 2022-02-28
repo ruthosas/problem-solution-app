@@ -1,0 +1,41 @@
+.social{
+    .solical-row{
+        display: flex;
+        .scard{
+            flex-grow: 1;
+            text-align: center;
+            i{
+                font-size: 42px;
+                color: #FFF;
+            }
+            height: 150px;
+            margin: auto;
+            padding-top: 45px;
+        }
+        .fb{
+            background-color: #1952a9;
+        }
+        .tw{
+            background-color: #26d4f9;
+        }
+        .pin{
+            background-color: #fb4343;
+        }
+        .drib{
+            background-color: #eb477c;
+        }
+        .in{
+            background-color: #17a2b8;
+        }
+        .vim{
+            background-color: #33a9ef;
+        }
+        .tum{
+            background-color: #54809d;
+        }
+        .you{
+            background-color: #dc3545;
+        }
+    }
+    
+}

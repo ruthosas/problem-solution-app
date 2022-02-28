@@ -1,0 +1,25 @@
+.blog-cont{
+    @include big-padding();
+    background-color: #f7f7f7ad;
+    .blog-ro{
+        padding: 5px;
+        .vgb{
+            padding-left: 0px;
+            h6{
+                font-size: .87rem;
+                font-family: $mouse-300;
+                line-height: 22px;
+            }
+            ul{
+                li{
+                    font-size: .758rem;
+                    float: left;
+                    margin-right: 10px;
+                    i{
+                        color: #1bbc9b;
+                    }
+                }
+            }
+        }
+    }
+}

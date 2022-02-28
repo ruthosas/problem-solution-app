@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="{% static 'assets/css/bootstrap.min.css' % }" rel="stylesheet">
+    <link href="{% static 'assets/css/font-awesome.min.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+    <title>Login Page</title>
+  </head>
+  <body>
+    {% load crispy_forms_tags%}
+
+    {% block content%}
+    <br><br>
+    <section class="form-02-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="_lk_de">
+              <div class="form-03-main">
+                <div class="logo">
+                  <img src="{% static 'images/technical-support-center-customer-service-260nw-1119128888.jpg' %}">
+                </div>
+                <div class="form-group">
+                <center><h3>login</h3>
+                    <br>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <p>{{ field.label }}: <br> {{ field }}</p>
+                        {% endfor %}
+                        <div class="form-group">
+                        <button btn btn-primary type ="submit">Login</button>
+                        </div>
+                </center>
+                </div>
+                
+                <div class="checkbox form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="">
+                    <label class="form-check-label" for="">
+                      Remember me
+                    </label>
+                  </div>
+                  <p>Don't have an account? <a style="color:red;" href="{% url 'register' %}"> Sign up </a></p>
+                </div>
+                </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>
+
+

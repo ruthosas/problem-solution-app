@@ -1,0 +1,80 @@
+.packages{
+     @include big-padding();
+    .session-title{
+        margin-bottom: 40px;
+    }
+    .product-box{
+        background-color: #FFF;
+        border-radius: 20px;
+        @include shado-1();
+        .product-header{
+            padding: 20px;
+            text-align: center;
+             border-bottom: 1px solid #CCC;
+            h4{
+                margin-bottom: 0px;
+            }
+            p{
+                font-size: .9rem;
+            }
+        }
+        .product-popular{
+            padding: 16px;
+            color: #FFF;
+            background-color: #0098ef;
+            font-family: $mouse-500;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            text-align: center;
+        }
+        .product-price{
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .product-features{
+            text-align: center;
+            ul{
+                li{
+                    padding: 3px;
+                    color: #444;
+                    font-family: $mouse-300;
+                }
+            }
+            .smal{
+                    margin-top: 20px;
+                    li{
+                        font-weight: 300;
+                        color: #6d6a6a;
+                        font-size: .9rem;
+                         font-family: $mouse-300;
+                    }         
+            }
+        }
+        .product-order{
+            padding: 20px;
+            a{
+                background-color: #fc3;
+                width: 100%;
+                text-align: center;
+                color: #422;
+                border-color: #fc3;
+                font-family: $mouse-500;
+                i{
+                    margin-right: 10px;
+                }
+                &:hover{
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .ultimate{
+        margin-top: -40px;
+        margin-bottom: 40px;
+    }
+    .inner-title{
+        margin-bottom: 80px;
+    }
+}

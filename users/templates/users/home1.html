@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <title>CITTU Problem and Solution Log</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/offcanvas-navbar/">
+
+    {% extends 'base.html' %}
+
+  </head>
+  <body class="bg-light"><br>
+    
+{% block content %}
+<br><br>
+<br><br>
+
+  <div >
+    <h2  style="font-style: oblique;"><marquee>Welcome to CITTU problem/solution log Homepage</marquee></h2>
+    
+    <br><br>
+
+  <div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h4 class="border-bottom pb-2 mb-0">About</h4>
+    <div class="d-flex text-muted pt-3">
+      <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+
+      <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <strong class="text-gray-dark">Enter Complaints</strong>
+          <a href= "{% url 'problem' %}">Click Here</a>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex text-muted pt-3">
+      <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+
+      <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <strong class="text-gray-dark">View Solutions</strong>
+          <a href="#">Click Here</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+    
+  </body>
+
+  {% endblock %}
+</html>
+<div  class="col-sm-6 cop-ck">
+    <h2 >Contact Form</h2>
+        <div class="row cf-ro">
+            <div  class="col-sm-3"><label>Enter Name </label> <span>:</span></div>
+            <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="name" class="form-control input-sm"  ></div>
+        </div>
+        <div  class="row cf-ro">
+            <div  class="col-sm-3"><label>Email Address </label> <span>:</span></div>
+            <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Email Address" class="form-control input-sm"  ></div>
+        </div>
+         <div  class="row cf-ro">
+            <div  class="col-sm-3"><label>Mobile Number</label> <span>:</span></div>
+            <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
+        </div>
+         <div  class="row cf-ro">
+            <div  class="col-sm-3"><label>Enter  Message</label> <span>:</span></div>
+            <div class="col-sm-8">
+              <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm"></textarea>
+            </div>
+        </div>
+         <div  class="row cf-ro">
+            <div  class="col-sm-3"><label></label> </div>
+            <div class="col-sm-8">
+             <button class="btn btn-success btn-sm">Send Message</button>
+            </div>
+    </div>
+</div>
+</div>
+
+
+<div style="font-size: 10px;" class="col-md-10 glink">
+    <ul>
+        <li><a href="{% url 'home' %}"><i class="fas fa-angle-double-right"></i>Home</a></li>
+        <li><a href="{% url 'problem' %}"><i class="fas fa-angle-double-right"></i>Enter Complaints</a></li>
+        <li><a href="{% url 'problem_list' %}"><i class="fas fa-angle-double-right"></i>Problem List</a></li>
+        <li><a href="{% url 'solution_list' %}"><i class="fas fa-angle-double-right"></i>Solution List</a></li>
+        <li><a href="{% url 'adopted_solutions_list' %}"><i class="fas fa-angle-double-right"></i>Adopted Solutions</a></li>
+        <li><a href="{% url 'reportform' %}"><i class="fas fa-angle-double-right"></i>Enter Reports</a></li>
+    </ul>
+</div>
+
+<footer  id="contact">
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 about">
+                <div class="foot-address">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div style="font-size: 10px;" class="addet">
+                      <i>Software Sub-Unit, CITTU, FMC KEFFI, Nassarawa </i> 
+                    </div>
+                </div>
+                <div class="foot-address">
+                    <div class="icon">
+                        <i class="far fa-envelope-open"></i>
+                    </div>
+                    <div style="font-size: 10px;" class="addet">
+                        keffi2@gmail.com <br>
+                        www.keffi.com
+                    </div>
+                </div>
+                <div class="foot-address">
+                    <div class="icon">
+                         <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div style="font-size: 10px;" class="addet">
+                        +23 323 43434 <br>
+                        +1 3232 434 55
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+     
+</footer>
+<span>
+    <a><i>Software Sub-Unit
+      CITTU, FMC
+      KEFFI Nassarawa </i></a>
+    <a><i class="fab fa-google-plus-g"></i></a>
+    <a><i class="fab fa-pinterest-p"></i></a>
+    <a><i class="fab fa-twitter"></i></a>
+    <a><i class="fab fa-facebook-f"></i></a>
+</span>

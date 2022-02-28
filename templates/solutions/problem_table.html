@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br>
+<br><br>
+<h3>Enter Solution</h3>
+<form action="" method="POST">{% csrf_token %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Problem</th>
+        <th scope="col">Description</th>
+        <th scope="col">Location</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for problem in problems %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{problem.title}}</td>
+        <td>{{problem.description}}</td>
+        <td>{{problem.location}}</td>
+        <td><a href="{% url 'solution' id=problem.id %}">Enter Solution</a>></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</form>
+{% endblock %}

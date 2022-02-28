@@ -1,0 +1,38 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include "base_files/css.html" %}
+    {% include "base_files/js.html" %}
+</head>
+<body>
+
+   
+    {% include "base_files/navbar.html" %}
+
+    {% if messages %}
+    <ul style="text-align: center; color: mediumaquamarine;" class="messages">
+        {% for message in messages %}
+        <div class="container-fluid p-0">
+            <div {% if message.tags %} class="alert {{ message.tags }} alert-dismissible" role="alert" {% endif %}>
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+            {{ message }}
+            </div>
+        </div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <div class="container">
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>

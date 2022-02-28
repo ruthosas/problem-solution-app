@@ -1,0 +1,23 @@
+<h1>This is my report</h1>
+
+{%for reports in report %}
+<table class="table table-striped table-hover">
+<tr>
+<th>{{reports.report_type}} </th>
+<td>{{reports.introduction}}</td> 
+<td>{{reports.achievement}} </td>
+<td>{{reports.challenge}} </td>
+<td>{{reports.conclusion}} </td>
+<td>{{reports.date_from}} </td>
+<td>{{reports.date_to}} </td>
+<td>{{reports.content|safe}} </td>
+<td>{{reports.created_by}} </td>
+<td>{{reports.date_created}} </td>
+</tr>
+
+</table>
+
+
+<button class="btn btn-secondary"><a href="{% url 'updatereport' reports.id %}">Edit</a></button>
+<hr>
+{%endfor%}

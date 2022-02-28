@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br>
+<br><br>
+<h3>Solution List</h3>
+<form action="" method="POST">{% csrf_token %}
+{% for problem in problems %}
+{% for p in problem.solution_set.all|slice:"1" %}
+      {% if p.solution %}
+      <div class="card">
+        <div class="card-header">
+        <strong>{{problem.title}} ({{ problem.app.app_name}})</strong> 
+        {% if request.user.groups.all.0.name == 'admin' or request.user.groups.all.0.name == 'superuser' or request.user.groups.all.0.name == 'unit_head' %}
+        <button class="btn btn-primary" style="float: right;"><a href="{% url 'adopt_solutions' id=problem.id %}" style="font: bold; color: aliceblue;">Adopt</a></button>  
+     {%endif%}
+      </div>
+      {% endif %}
+      {% endfor %}
+
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      {% for p in problem.solution_set.all %}
+      {% if p.problem %}
+      <footer class="blockquote-footer">{{p.solution}} <cite title=""> &nbsp; &nbsp;
+        {% if p.created_by == request.user %}
+        <a style="font-size: small" href="{% url 'update' id=p.id %}">Update</a>&nbsp;
+        <a style="font-size: small" href="{% url 'delete' id=p.id %}">Delete</a>
+      </cite>
+    {% else %}
+    {% if request.user.groups.all.0.name == 'admin'%}
+        <a style="font-size: small" href="{% url 'delete' id=p.id %}">Delete</a>
+    {% endif %}
+    {% endif %}
+  </footer>
+{%endif%}
+{% endfor %}
+</blockquote>
+</div>
+</div>
+{%endfor%}
+</form>
+{% endblock %}

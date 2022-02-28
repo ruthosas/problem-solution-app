@@ -1,0 +1,121 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <title> Home Page </title>
+
+    <link rel="shortcut icon" href="{% static 'homepage/assets/images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'homepage/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/assets/css/fontawsom-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/assets/plugins/revolution/css/settings.css' %}" />
+    <link rel="stylesheet" href="{% static 'homepage/assets/css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/assets/css/style.css' %}" />
+</head>
+
+<body>
+
+  <!-- <nav id="menu-jk" class="container-fluid  no-padding">
+    <div class="container">
+        <div class="row">
+            <div id="nav-head" class="col-md-12 nav-div d-none d-md-block">
+                <ul>
+                    <li><a class="js-scroll-trigger" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="js-scroll-trigger" href="{% url 'problem' %}">Enter Complaints</a></li>
+                    <li class="yc"><a class="js-scroll-trigger" href="{% url 'problem_list' %}">Problem List</a></li>
+                    <li><a class="js-scroll-trigger" href="{% url 'solution_list' %}">Solutions List</a></li>
+                    <li><a class="js-scroll-trigger" href="{% url 'adopted_solutions_list' %}">Adopted Solutions</a></li>
+                    <li><a class="js-scroll-trigger" href="{% url 'login' %}"><strong> Logout</strong></a></li>
+                </ul>
+                {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">{{request.user.username}}</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown01">
+            <li><a class="dropdown-item" href="#">Change Password</a></li>
+          </ul>
+        </li>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        {%endif%}
+        <form class="d-flex" method="POST" action="{% url 'search-problem' %}">
+          {% csrf_token %}
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+            </div>
+        </div>
+    </div>
+</nav> -->
+{% include 'base_files/js.html' %} 
+{% include 'base_files/navbar.html' %}
+   
+   <div id="home" class="banner-container no-padding">
+       <div class="container">
+          <div class="row mx-auto">
+              
+          </div>
+           <div class="slider-det">
+               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                 <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <span>Welcome to CITTU'S PROBLEM LOG</span>
+                      <h2>ENTER YOUR COMPLAINTS</h2>
+                      <p>Enjoy a speedy response</p>
+                    </div>
+                    <div class="carousel-item">
+                       <span>Welcome to CITTU'S SOLUTION LOG</span>
+                      <h2>ENTER YOUR SOLUTIONS TO COMPLAINTS</h2>
+                      <p>Enjoy the wonderful feeling of our design</p>  
+                    </div>
+                    <div class="carousel-item">
+                      <span>Welcome to CITTU'S PROBLEM/SOLUTION LOG</span>
+                      <h2>YOU CAN VIEW APPROVED SOLUTIONS TO ALL COMPLAINTS</h2>
+                      <p>Enjoy a speedy response</p>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+               </div>
+           </div>
+       </div>
+   </div>
+    </section> 
+   
+
+<div class="copy">
+            <div class="container">
+                <a href="">2021 &copy; All Rights Reserved | Designed and Developed by Software Sub-Unit</a>
+            </div>
+
+        </div>
+    
+</body>
+<script src="{% static 'homepage/assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'homepage/assets/js/popper.min.js' %}"></script>
+<script src="{% static 'homepage/assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'homepage/assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+<script src="{% static 'homepage/assets/plugins/scroll-nav/js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'homepage/assets/js/script.js' %}"></script>
+
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+/* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+
+/* ===================================== Import Less ================================== */
+@import 'variable';
+/* ===================================== Basic CSS ================================== */
+@import 'base/basic_setup';
+
+@import 'base/buttons';
+/* ===================================== Full Screen Background CSS ======================== */
+@import 'components/full_screen_banner';
+
+/* ===================================== Header CSS ================================== */
+@import 'components/header';
+
+/* ===================================== Key Features CSS ================================== */
+@import 'components/key_features';
+
+/* ===================================== About Company CSS ================================== */
+@import 'components/about_us';
+
+/* ===================================== Capablity CSS ================================== */
+@import 'components/capablity';
+
+/* ===================================== Services CSS ================================== */
+@import 'components/services';
+
+/* ===================================== Testimonial CSS ================================== */
+@import 'components/testimonial';
+
+/* ===================================== Social Media CSS ================================== */
+@import 'components/social_media';
+
+/* ===================================== Price Tab CSS ================================== */
+@import 'components/price_tab';
+
+/* ===================================== Breaking News CSS ================================== */
+@import 'components/blog';
+
+/* ===================================== Contact US CSS ================================== */
+@import 'components/contact_us';
+
+/* ===================================== Footer CSS ================================== */
+@import 'components/footer';
